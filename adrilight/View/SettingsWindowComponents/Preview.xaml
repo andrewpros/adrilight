@@ -83,14 +83,14 @@
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
-                                <Rectangle Width="{Binding Rectangle.Width}" Height="{Binding Rectangle.Height}">
-                                    <Rectangle.Fill>
+                                <Ellipse Width="{Binding Rectangle.Width}" Height="{Binding Rectangle.Height}">
+                                    <Ellipse.Fill>
                                         <RadialGradientBrush>
                                             <GradientStop Color="{Binding OnDemandColor}"  Offset="0"/>
-                                            <GradientStop Color="{Binding OnDemandColorTransparent}" Offset="1"/>
+                                            <GradientStop Color="{Binding OnDemandColor}" Offset="1"/>
                                         </RadialGradientBrush>
-                                    </Rectangle.Fill>
-                                </Rectangle>
+                                    </Ellipse.Fill>
+                                </Ellipse>
                                     <Rectangle Visibility="{Binding IsFirst, Converter={StaticResource booleanToVisibilityConverter}}" Fill="Red"
                                                Width="{Binding Rectangle.Width}" 
                                                Height="{Binding Rectangle.Height}" />
